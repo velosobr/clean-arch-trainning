@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc:init": "tsc --init",
+    "build": "tsc",
+"test": "tsc && jest dist/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/velosobr/clean-arch-trainning/issues"
   },
-  "homepage": "https://github.com/velosobr/clean-arch-trainning#readme"
+  "homepage": "https://github.com/velosobr/clean-arch-trainning#readme",
+  "dependencies": {
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.0"
+  }
 }
