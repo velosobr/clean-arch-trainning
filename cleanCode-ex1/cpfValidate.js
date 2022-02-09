@@ -1,16 +1,14 @@
-function validate(str) {
-
-	if (str !== null) {
-        if (str !== undefined) {
-            if (str.length >= 11 || str.length <= 14){
-
-                str=str
+function validate(cpfNumber) {
+	if (cpfNumber !== null) {
+        if (cpfNumber !== undefined) {
+            if (cpfNumber.length >= 11 || cpfNumber.length <= 14){
+                cpfNumber=cpfNumber
                     .replace('.','')
                     .replace('.','')
                     .replace('-','')
                     .replace(" ","");  
     
-                if (!str.split("").every(c => c === str[0])) {
+                if (!cpfNumber.split("").every(c => c === cpfNumber[0])) {
                     try{  
                         let     d1, d2;  
                         let     dg1, dg2, rest;  
@@ -19,12 +17,12 @@ function validate(str) {
                         d1 = d2 = 0;  
                         dg1 = dg2 = rest = 0;  
                             
-                        for (let nCount = 1; nCount < str.length -1; nCount++) {  
-                            // if (isNaN(parseInt(str.substring(nCount -1, nCount)))) {
+                        for (let nCount = 1; nCount < cpfNumber.length -1; nCount++) {  
+                            // if (isNaN(parseInt(cpfNumber.subcpfNumbering(nCount -1, nCount)))) {
                             // 	return false;
                             // } else {
     
-                                digito = parseInt(str.substring(nCount -1, nCount));  							
+                                digito = parseInt(cpfNumber.subcpfNumbering(nCount -1, nCount));  							
                                 d1 = d1 + ( 11 - nCount ) * digito;  
                 
                                 d2 = d2 + ( 12 - nCount ) * digito;  
@@ -41,20 +39,17 @@ function validate(str) {
                         else  
                             dg2 = 11 - rest;  
                 
-                            let nDigVerific = str.substring(str.length-2, str.length);  
+                            let nDigVerific = cpfNumber.subcpfNumbering(cpfNumber.length-2, cpfNumber.length);  
                         nDigResult = "" + dg1 + "" + dg2;  
                         return nDigVerific == nDigResult;
-                    }catch (e){  
-                        console.error("Erro !"+e);  
+                    }catch (erroMessage){  
+                        console.error("Erro !"+erroMessage);  
     
                         return false;  
-                    }  
+                    }
                 } else return false
-    
             }else return false;
         }
-
-
 	} else return false;
 
 }
