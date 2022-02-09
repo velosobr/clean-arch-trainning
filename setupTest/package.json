@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && jest src/",
+    "test": "tsc && jest dist/",
     "tsc:init": "tsc --init",
     "build": "tsc"
   },
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "jest": "^27.5.0"
+    "jest": "^27.5.1"
   },
   "description": ""
 }
