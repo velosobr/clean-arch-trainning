@@ -4,8 +4,18 @@
   "description": "",
   "main": "cpfValidade.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc:init": "tsc --init",
+    "build": "tsc",
+    "test": "tsc && jest dist/"
+    
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.1"
+  }
 }
