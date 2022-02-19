@@ -1,4 +1,4 @@
-import Cpf from "../src/Cpf"
+import Cpf from "../src/util/Cpf"
 
 test("Deve testar um cpf válido", function () {
    const cpf = new Cpf("089.608.269-52")

@@ -13,7 +13,7 @@ export default class Cpf{
    }
    validate(cpf: string){
       if(!cpf) return false
-      cpf = this.cleanCpf(cpf)
+      this.cleanCpf(cpf)
    }
 
    private cleanCpf(cpf: string){
