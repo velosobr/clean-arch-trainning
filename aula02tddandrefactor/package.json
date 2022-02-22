@@ -10,9 +10,12 @@
     "jest": "^27.5.1",
     "typescript": "^4.5.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/jest": "^27.4.0"
+  },
   "scripts": {
-    "test": "tsc && jest ./dist"
+    "test": "tsc && jest ./dist",
+    "test-watch": "tsc && jest --watch-all ./dist"
   },
   "keywords": [],
   "author": "",
