@@ -1,1 +1,1 @@
-class DiscountRepository implements IDiscountRepository {}
+// class DiscountRepository implements IDiscountRepository {}

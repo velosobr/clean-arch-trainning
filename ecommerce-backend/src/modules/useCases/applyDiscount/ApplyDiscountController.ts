@@ -1,7 +1,7 @@
-import { ApplyDiscountUseCase } from "./ApplyDiscountUseCase";
+// import { ApplyDiscountUseCase } from "./ApplyDiscountUseCase";
 
-class ApplyDiscountController {
-   constructor(private applyDiscountUseCase: ApplyDiscountUseCase)
-}
+// class ApplyDiscountController {
+//    constructor(private applyDiscountUseCase: ApplyDiscountUseCase)
+// }
 
-export { ApplyDiscountController }
+// export { ApplyDiscountController }
