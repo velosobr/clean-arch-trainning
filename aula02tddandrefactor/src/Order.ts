@@ -1,11 +1,11 @@
 import Cpf from "./Cpf";
-import Cupom from "./Cupom";
+import Coupon from "./Coupon";
 import Item from "./Item";
 import OrderItem from "./OrderItem";
 
 export default class Order{
    cpf: Cpf
-   cupom: Cupom | undefined
+   coupon: Coupon | undefined
    orderItems: OrderItem[]
 
 
@@ -19,8 +19,8 @@ export default class Order{
       
    }
 
-   addCupom(cupom: Cupom){
-      this.cupom = cupom
+   addCoupon(coupon: Coupon){
+      this.coupon = coupon
    }
    getTotal() {
 
@@ -29,8 +29,8 @@ export default class Order{
          total += orderItem.getTotal()
       }
 
-      if (this.cupom) {
-         total -= ((total * this.cupom.discountValue)/100)
+      if (this.coupon) {
+         total -= ((total * this.coupon.discountValue)/100)
       }
       return total
 

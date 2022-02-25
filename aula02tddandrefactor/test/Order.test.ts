@@ -1,4 +1,4 @@
-import Cupom from "../src/Cupom";
+import Coupon from "../src/Coupon";
 import Item from "../src/Item";
 import Order from "../src/Order";
 
@@ -31,8 +31,8 @@ test("Deve criar um pedido com 3 items com cupom de desconto", function(){
     order.addItem(new Item(2, "Instrumentos Musicais", "Amplificador", 5000), 1)
     order.addItem(new Item(3, "Acessórios", "Cabo", 30), 3)
 
-    const cupom = new Cupom("VALE20", 20)
-    order.addCupom(cupom)
+    const coupon = new Coupon("VALE20", 20)
+    order.addCoupon(coupon)
     const total = order.getTotal()
     expect(total).toBe(4872)
 })
