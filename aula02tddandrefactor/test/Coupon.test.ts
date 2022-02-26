@@ -4,7 +4,7 @@ test("deve Criar um cupom de desconto", function(){
    const coupon = new Coupon("VALE20", 20)
 
    expect(coupon.percentage).toBe(20)
-   const isExpired = coupon.isExpired())
+   const isExpired = coupon.isExpired()
    expect(isExpired).toBeFalsy()
 })
 
