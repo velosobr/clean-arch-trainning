@@ -1,4 +1,4 @@
-1 - Não deve aplicar um cupom de desconto expirado
+1 - Não deve aplicar um cupom de desconto expirado OK
 2 - Deve calcular o frete considerando as dimensões e peso do objeto
 3 - Deve retornar o valor mínimo de R$10,00 caso o valor calculado seja inferior
 

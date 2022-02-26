@@ -9,7 +9,7 @@ export default class Order{
    orderItems: OrderItem[]
 
 
-   constructor(cpf: string){
+   constructor(cpf: string, readonly issueDate: Date = new Date()){
       this.cpf = new Cpf(cpf)
       this.orderItems = []
    }
@@ -20,7 +20,10 @@ export default class Order{
    }
 
    addCoupon(coupon: Coupon){
-      this.coupon = coupon
+      if(!coupon.isExpired(this.issueDate)){
+         this.coupon = coupon
+      }
+      
    }
    getTotal() {
 
@@ -30,7 +33,7 @@ export default class Order{
       }
 
       if (this.coupon) {
-         total -= ((total * this.coupon.discountValue)/100)
+         total -= ((total * this.coupon.percentage)/100)
       }
       return total
 
