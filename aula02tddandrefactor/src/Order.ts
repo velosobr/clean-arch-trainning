@@ -30,7 +30,7 @@ export default class Order{
       }
 
       if (this.coupon) {
-         total -= ((total * this.coupon.discountValue)/100)
+         total -= ((total * this.coupon.percentage)/100)
       }
       return total
 
