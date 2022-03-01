@@ -2,10 +2,16 @@ import Coupon from "../src/Coupon"
 
 test("deve Criar um cupom de desconto", function(){
    const coupon = new Coupon("VALE20", 20)
-
-   expect(coupon.percentage).toBe(20)
    const isExpired = coupon.isExpired()
    expect(isExpired).toBeFalsy()
+})
+
+
+test("deve Criar um cupom de desconto e calcular o desconto", function(){
+   const coupon = new Coupon("VALE20", 20)
+   const discount = coupon.calculateDiscount(1000)
+   const isExpired = coupon.isExpired()
+   expect(discount).toBe(200)
 })
 
 test("deve Criar um cupom de desconto expirado", function(){
