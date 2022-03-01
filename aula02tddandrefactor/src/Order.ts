@@ -26,16 +26,13 @@ export default class Order{
       
    }
    getTotal() {
-
       let total = 0
       for(const orderItem of this.orderItems) {
          total += orderItem.getTotal()
       }
-
       if (this.coupon) {
-         total -= ((total * this.coupon.percentage)/100)
+         total -= this.coupon.calculateDiscount(total)      
       }
       return total
-
    }
 }
