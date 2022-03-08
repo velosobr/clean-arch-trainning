@@ -58,6 +58,5 @@ test("Deve fazer um pedido com 3 items e calcular o frete", function(){
     order.addItem(new Item(2, "Instrumentos Musicais", "Amplificador", 5000, new Dimension(100, 50, 50), 20), 1)
     order.addItem(new Item(3, "Acessórios", "Cabo", 30, new Dimension(10, 10, 10), 1), 3)
     const total = order.getTotal()
-    const freight = new Freight()
     expect(total).toBe(6350)
 })
