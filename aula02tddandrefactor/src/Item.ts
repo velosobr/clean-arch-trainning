@@ -13,12 +13,14 @@ export default class Item{
       
 
       getVolume(){
-         if (this.dimension) return this.dimension.getVolume()
+         if (this.dimension) 
+            return this.dimension.getVolume()
+         return 0
       }
 
       getDensity(){
-         if(this.weight && this.dimension){
-         return this.weight / this.dimension.getVolume()     
-         }
+         if(this.weight && this.dimension)
+            return this.weight / this.dimension.getVolume()     
+         return 0
       }
 }
