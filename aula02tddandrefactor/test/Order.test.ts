@@ -1,4 +1,6 @@
 import Coupon from "../src/Coupon";
+import Dimension from "../src/Dimension";
+import Freight from "../src/Freight";
 import Item from "../src/Item";
 import Order from "../src/Order";
 
@@ -48,4 +50,14 @@ test("Deve criar um pedido com 3 items com cupom de desconto expirado", function
     order.addCoupon(coupon)
     const total = order.getTotal()
     expect(total).toBe(6090)
+})
+
+test("Deve fazer um pedido com 3 items e calcular o frete", function(){
+    const order = new Order("089.608.269-52");
+    order.addItem(new Item(1, "Instrumentos Musicais", "Guitarra", 1000, new Dimension(100, 30, 30), 3), 1)
+    order.addItem(new Item(2, "Instrumentos Musicais", "Amplificador", 5000, new Dimension(100, 50, 50), 20), 1)
+    order.addItem(new Item(3, "Acessórios", "Cabo", 30, new Dimension(10, 10, 10), 1), 3)
+    const total = order.getTotal()
+    const freight = new Freight()
+    expect(total).toBe(6090 + 30)
 })

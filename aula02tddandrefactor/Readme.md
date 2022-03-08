@@ -20,3 +20,11 @@ O Open/Closed
 L Liskov Substitution
 I Interface Segregation
 D Dependency Inversion
+
+
+Design Patterns   
+   - Facade
+Abstrai um subsistema mais complexo oferecendo uma interface mais simples de interação
+
+Refactoring
+   - Introdução de objeto parâmetro (Dimension)
