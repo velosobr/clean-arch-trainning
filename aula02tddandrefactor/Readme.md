@@ -25,6 +25,10 @@ D Dependency Inversion
 Design Patterns   
    - Facade
 Abstrai um subsistema mais complexo oferecendo uma interface mais simples de interação
-
+Strategy
+Chavear o comportamento em tempo de execução
 Refactoring
    - Introdução de objeto parâmetro (Dimension)
+
+Invariance
+Estado interno do objeto que deve ser consistente sempre
