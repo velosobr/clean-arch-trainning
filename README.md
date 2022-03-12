@@ -38,3 +38,8 @@ Refatorar é <u>reconhecer</u> code smells
 - se resolve extraindo em outros métodos
 - caber na tela
 ### Longa lista de parâmetros
+
+Clean Arch
+- Você não é obrigado, e nem deve, a adotar o mesmo tipo de arquitetura para tudo.
+- There is no one size fits all
+- "Beginners may sometime only use entity object as data carriers and place all dynamic behaviour in control objects. This, should, however be avoided. Instead, quite a lot of behaviour should be placed in the entity objects"
