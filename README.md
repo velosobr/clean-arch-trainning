@@ -43,3 +43,12 @@ Clean Arch
 - Você não é obrigado, e nem deve, a adotar o mesmo tipo de arquitetura para tudo.
 - There is no one size fits all
 - "Beginners may sometime only use entity object as data carriers and place all dynamic behaviour in control objects. This, should, however be avoided. Instead, quite a lot of behaviour should be placed in the entity objects"
+- "The heart of software is its ability to solve domain-related problems for its user" -Eric Evans
+- "Allow an application to equally be driven by users, programs, automated test or batch scripts, and to developed and tested in isolation from its evetuan run-time devices and databases" - Alistair Cockburn
+
+ISOLAR AS REGRAS DE NEGÓCIO
+DEFINIR CAMADAS E SUAS RESPONSABILIDADES
+CRIAR UM FLUXO DE CONTROLE E DEPENDENCIA ORDENADO E DIRECIONAL
+FAVORECER A TESTABILIDADE
+SÃO INDEPENDENTES DE RECURSOS EXTERNOS
+FAVORECCER A EVOLUCAO TECNOLOGICA
