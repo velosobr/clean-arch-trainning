@@ -22,6 +22,7 @@ Código com teste é mais rápido, pode ter certeza.
 Refatorar é <u>reconhecer</u> code smells 
 
 ## Code Smells e Técnicas de Refactoring
+Um smell é um sintoma que ocorre dentro do código fonte e que pode ser um indicador de problemas.
 ### Nomes estranhos :::
  - tem impacto pequeno mas faz uma diferença enorme.
 ### Números mágicos
