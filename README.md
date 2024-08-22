@@ -26,10 +26,13 @@ Um smell é um sintoma que ocorre dentro do código fonte e que pode ser um indi
 ### Nomes estranhos :::
  - tem impacto pequeno mas faz uma diferença enorme.
 ### Números mágicos
+- Crie uma constante, nomeie-a de acordo com seu significado e substita o número por ela.
 ### Comentários
 - nomes declarativos evitam comentários desnecessários
 ### Códigos esquecidos
+- código desligados e comentados, não tem motivo no mundo para ter isso, isso polui demais o código.
 ### Linhas em branco
+reduzir isso em métodos, se quiser separar contextos extraia em métodos.
 ### Muitos ifs ou ifs aninhados :::
 - early return - clausula guarda
 ### Ternário
