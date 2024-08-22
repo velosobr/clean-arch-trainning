@@ -1,58 +1,68 @@
-Refactoring
+# Curso de Clean Architecture - Professor Rodrigo Branas
 
-Alteração feita na estrutra interna do sotware para torna-lo mais facil de ser entendido e menos custoso de ser modificado, sem alterar o seu comportamento observavel"- Martin Fowler
+## Conceitos Gerais
 
-Vivemos em uma cultura de desenvolvimento colaborativa.
+### Desenvolvimento Colaborativo
+- Vivemos em uma cultura de desenvolvimento colaborativa.
+- As demandas nunca vão acalmar, por isso é importante o refactoring contínuo.
+- Refactoring é um investimento, torna o software sustentável e competitivo.
+- Dia após dia a falta de refactoring consome o tempo da equipe. Por isso o tempo é cada vez mais curto. Demandas urgentes vão aparecer, mas otimizar será sempre necessário.
+- Refatore com um propósito: 
+  - Evite refatorar apenas por refatorar.
+  - Refatore na hora de adicionar uma nova feature.
+  - Refatore quando for corrigir um defeito.
+  - Refatore quando precisar entender uma parte do código.
 
-As demandas nunca vão acalmar, por isso é importante o refactoring continuo.
-
-Refactoring é um investimento, torna o software sustentável e competitivo.
-
-Dia após dia a fata de refactoring consome o tempo da equipe. Por isso o tempo é cada vez mais curto. Demandas urgentes vão aparecer, mas otimizar será sempre necessário.
-Refatore com um propósito, evite refatorar apenas por refatorar, refatore na hora de adicionar uma nova feature, refatore quando for corrigir um defeito. Refatore quando precisar entender uma parte do código.
-
-Muitas empresas precisa contrair algumas dividas para crescer e escalar. Porém as dívidas vem mais tarde e cobram juros.
-
-"If we wish to count lines of code, we should note regard them as lines produced but as lines spent." Edsger dijkstra
-
-é nossa responsabilidade garantir a <u>qualidade</u> do nosso trabalho.
-Código legado é código que as pessoas perderam esperança.
-Código com teste é mais rápido, pode ter certeza.
-
-Refatorar é <u>reconhecer</u> code smells 
+### Dívida Técnica
+- Muitas empresas precisam contrair algumas dívidas para crescer e escalar. Porém, as dívidas vêm mais tarde e cobram juros.
+- "If we wish to count lines of code, we should note regard them as lines produced but as lines spent." - Edsger Dijkstra
+- É nossa responsabilidade garantir a **qualidade** do nosso trabalho.
+- Código legado é código que as pessoas perderam esperança.
+- Código com teste é mais rápido, pode ter certeza.
+- Refatorar é **reconhecer** code smells.
 
 ## Code Smells e Técnicas de Refactoring
+
 Um smell é um sintoma que ocorre dentro do código fonte e que pode ser um indicador de problemas.
-### Nomes estranhos :::
- - tem impacto pequeno mas faz uma diferença enorme.
-### Números mágicos
-- Crie uma constante, nomeie-a de acordo com seu significado e substita o número por ela.
+
+### Nomes Estranhos
+- Tem impacto pequeno mas faz uma diferença enorme.
+
+### Números Mágicos
+
 ### Comentários
-- nomes declarativos evitam comentários desnecessários
-### Códigos esquecidos
-- código desligados e comentados, não tem motivo no mundo para ter isso, isso polui demais o código.
-### Linhas em branco
-reduzir isso em métodos, se quiser separar contextos extraia em métodos.
-### Muitos ifs ou ifs aninhados :::
-- early return - clausula guarda
+- Nomes declarativos evitam comentários desnecessários.
+
+### Códigos Esquecidos
+
+### Linhas em Branco
+
+### Muitos Ifs ou Ifs Aninhados
+- Early return - cláusula guarda.
+
 ### Ternário
-### Switch statements 
-- chaveamento de estados
-### Métodos longos :::
-- se resolve extraindo em outros métodos
-- caber na tela
-### Longa lista de parâmetros
 
-Clean Arch
+### Switch Statements
+- Chaveamento de estados.
+
+### Métodos Longos
+- Se resolve extraindo em outros métodos.
+- Deve caber na tela.
+
+### Longa Lista de Parâmetros
+
+## Clean Architecture
+
 - Você não é obrigado, e nem deve, a adotar o mesmo tipo de arquitetura para tudo.
-- There is no one size fits all
-- "Beginners may sometime only use entity object as data carriers and place all dynamic behaviour in control objects. This, should, however be avoided. Instead, quite a lot of behaviour should be placed in the entity objects"
-- "The heart of software is its ability to solve domain-related problems for its user" -Eric Evans
-- "Allow an application to equally be driven by users, programs, automated test or batch scripts, and to developed and tested in isolation from its evetuan run-time devices and databases" - Alistair Cockburn
+- There is no one size fits all.
+- "Beginners may sometimes only use entity objects as data carriers and place all dynamic behaviour in control objects. This should, however, be avoided. Instead, quite a lot of behaviour should be placed in the entity objects."
+- "The heart of software is its ability to solve domain-related problems for its user." - Eric Evans
+- "Allow an application to equally be driven by users, programs, automated tests or batch scripts, and to be developed and tested in isolation from its eventual run-time devices and databases." - Alistair Cockburn
 
-ISOLAR AS REGRAS DE NEGÓCIO
-DEFINIR CAMADAS E SUAS RESPONSABILIDADES
-CRIAR UM FLUXO DE CONTROLE E DEPENDENCIA ORDENADO E DIRECIONAL
-FAVORECER A TESTABILIDADE
-SÃO INDEPENDENTES DE RECURSOS EXTERNOS
-FAVORECCER A EVOLUCAO TECNOLOGICA
+### Princípios da Clean Architecture
+- **Isolar as regras de negócio.**
+- **Definir camadas e suas responsabilidades.**
+- **Criar um fluxo de controle e dependência ordenado e direcional.**
+- **Favorecer a testabilidade.**
+- **Ser independente de recursos externos.**
+- **Favorecer a evolução tecnológica.**
